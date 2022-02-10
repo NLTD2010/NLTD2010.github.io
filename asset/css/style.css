@@ -40,11 +40,11 @@ p {
 main {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  background-image: url('/asset/img/background.png');
   display: flex;
   align-items: center;
   justify-content: center;
-	background: #091921;
+
 
 /*	background: linear-gradient(#e91e63, #ffc107);
 	clip-path: circle(22% at 30% 20%);*/
@@ -100,6 +100,12 @@ a {
   width: 20rem;
   position: absolute;
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .circle1 {
