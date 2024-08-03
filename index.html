@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/77970269?s=400&u=32c0800cef9721cf964a5b4801abfbd8d042a13b&v=4">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="./asset/css/style.css" />
-  </head>
-  <body>
-    <main>
-      <section class="glass">
-        <div class="dashboard">
-          <div class="user">
-            <br>
-            <h1>About me</h1>
-            <br>
-            <img src="https://avatars.githubusercontent.com/u/77970269?s=400&u=32c0800cef9721cf964a5b4801abfbd8d042a13b&v=4" alt="" />
-            <h3>DannyVn <img class="downimg" src="./asset/img/bluetick_vertify.png" ></h3>
-            <p>^o^</p>
-          </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-info">
-                  <h2>Name : Nguyen Le Thai Duong</h2>
-              </div>
-            </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-info">
-                  <h2>Age : ***</h2>
-                  <div class="progress"></div>
-              </div>
-              <h2 class="percentage">Hidden</h2>
-            </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-info">
-                  <h2>Bio: Developer, Hackintosher.</h2>
-              </div>
-            </div>
-          </div>
-          <h4>Follow me at:</h4>
-          <br>
-          <div class="links">
-            <div class="wrapper">
-              <div class="icon facebook">
-                <div class="tooltip">Facebook</div>
-                
-                <span><a href="https://www.facebook.com/nguyenlethaiduong2000/" class="facebook" ><i class="fab fa-facebook-f"></i></a></span>
-              </div>
-            
-          <div class="icon github">
-                <div class="tooltip">Github</div>
-                
-                <span><a href="https://github.com/NLTD2010" class="github" ><i class="fab fa-github"></i></a></span>
-              </div>
-          <div class="icon youtube">
-                <div class="tooltip">YouTube</div>
-                <span><a href="https://www.youtube.com/channel/UCD3-7RY1D2-8soGgDL-qm6A" class="youtube" ><i class="fab fa-youtube"></i></a></span>
-              </div>
-          </div>
+    <head>
+        <title>thaiduong</title>
+        
+        <!-- Favicon -->
+        <link rel="apple-icon" sizes="192x192" href="apple-icon.jpg">
+        <link rel="icon" type="image/jpg" sizes="96x96" href="favicon-96x96.jpg">
+        <link rel="icon" type="image/jpg" sizes="32x32" href="favicon-32x32.jpg">
+        <link rel="icon" type="image/jpg" sizes="16x16" href="favicon-16x16.jpg">
+        <link rel="manifest" href="site.webmanifest">
 
-      </div>
-    </section>
-    </main>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-  </body>
+        <script src="script.js"></script>
+
+        <!-- metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- discord embed meta -->
+        <meta property="og:title" content="NLTD2010">
+        <meta property="og:description" content="NLTD2010 segg place">
+        <meta property="og:image" content="android-icon-192x192.jpg">
+        <meta property="theme-color" content="#FFC0CB">
+        <meta property="og:url" content="https://nltd2010.github.io">
+        
+        <!-- CSS -->
+        <link href="dist/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark selection:bg-surface2-light dark:selection:bg-surface2-dark" onload="fetchLanyard(); setInterval(fetchLanyard, 10000); displayTime()">
+        <nav class="z-50 w-full flex justify-start items-center mx-auto max-w-4xl px-8 my-20">
+            <a aria-label="home" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="/" title="go to home">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18 w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+                </svg>
+            </a>
+            <a aria-label="status" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="/devices" title="my devices">
+                <span>devices</span>
+            </a>
+
+        </nav>
+        <div class="h-full lg:px-0 px-10">
+            
+            <div class="flex flex-col max-w-3xl mx-auto mb-10 sm:px-0">
+                <h3><span class="text-4xl font-semibold focus:outline-none mr-2 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark my-1">Meow meow? 😺</span></h3>
+                <br/>
+                <div class="inter">
+                    <span class="text-base text-gray-600 dark:text-gray-400 max-w-sm mt-0"
+                        <p>Meow! I'm a ThaiDuong, 14 years old <span class="font-semibold">student</span> from Vietnam.</p>
+                    </span>
+                    <div class="grid grid-flow-col w-48 mt-3 text-lg">
+                        <a aria-label="GitHub" class="icon cursor-pointer fill-current focus:outline-none transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="https://github.com/NLTD2010/" target="_blank" title="stuff i made">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                        </a>
+                        <a aria-label="LQDOJ" class="icon cursor-pointer fill-current focus:outline-none transition duration-300 ease-in-out hover:text-blue-light dark:hover:text-blue-dark" href="https://lqdoj.edu.vn/user/NLTD2010" target="_blank" title="Meowwwww">
+
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="lqdoj" class="svg-inline--fa fa-w-16 fa-1x" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 1044.13 1044.13"><path d="M420.87,483.42a4.43,4.43,0,0,1,7.29-3.37c56.48,48,98.37,130.71,98.17,200.38-.2,71.39-44.54,105.43-103.24,85.15a4.43,4.43,0,0,1-3-4.21l.19-68.14a4.41,4.41,0,0,1,4.54-4.41c22,1,37.28-15.8,37.36-45.43.09-31.09-16.58-67.35-40.24-91.86a4.46,4.46,0,0,1-1.25-3.09ZM389.11,753.7l5.06,2.92a4.43,4.43,0,0,0,6.58-3.13l11.57-71.7a4.41,4.41,0,0,0-2.15-4.54l-16.41-9.47a4.43,4.43,0,0,0-6.64,3.82l-.22,78.25A4.45,4.45,0,0,0,389.11,753.7Zm-21.2-21.05a4.43,4.43,0,0,0,7.29-3.37l.18-65a4.43,4.43,0,0,0-1.26-3.09c-23.66-24.51-40.32-60.78-40.23-91.85.08-29.64,15.37-46.41,37.36-45.44a4.4,4.4,0,0,0,4.54-4.41l.19-68.14a4.45,4.45,0,0,0-3-4.21c-58.7-20.29-103,13.75-103.25,85.16C269.53,601.93,311.42,684.6,367.91,732.65ZM792.1,369.55l-65.94-38.07a4.44,4.44,0,0,0-4.43,0L531.53,442a4.41,4.41,0,0,1-4.43,0L339.66,333.8a4.41,4.41,0,0,0-4.43,0L276.33,368a4.42,4.42,0,0,0,0,7.65l251.2,145a4.46,4.46,0,0,0,4.44,0L792.1,369.55M686,449.75a4.44,4.44,0,0,1,3-4.21c58.6-20.26,102.88,13.73,103.08,85,.2,69.55-41.62,152.07-98,200a4.43,4.43,0,0,1-7.29-3.36l-.18-64.9a4.43,4.43,0,0,1,1.26-3.09c23.61-24.47,40.26-60.68,40.17-91.71C728,538,712.7,521.21,690.76,522.17a4.4,4.4,0,0,1-4.55-4.41Zm-149.73,366a4.43,4.43,0,0,0,6.64,3.82l59.52-34.36,37.33-21.56a4.43,4.43,0,0,0,2.21-3.84l-.19-65.79a4.42,4.42,0,0,0-6.63-3.82l-26.33,15.2a4.42,4.42,0,0,1-6.63-3.82l-.36-127.73a4.41,4.41,0,0,1,2.21-3.84l35.11-20.27a4.42,4.42,0,0,0,2.21-3.85l-.18-65.78a4.43,4.43,0,0,0-6.64-3.82l-67.34,38.88-29.51,17a4.44,4.44,0,0,0-2.21,3.85ZM530.91,0C237.7,0,0,237.69,0,530.91s237.7,530.92,530.91,530.92,530.92-237.7,530.92-530.92S824.13,0,530.91,0Zm0,884.85C335.44,884.85,177,726.39,177,530.91S335.44,177,530.91,177,884.85,335.43,884.85,530.91,726.4,884.85,530.91,884.85Z"/><path class="cls-5" d="M1044.13,0H553.2a17.7,17.7,0,0,0-17.7,17.7V159.28A17.69,17.69,0,0,0,553.2,177h314a17.71,17.71,0,0,1,17.7,17.7V527.75c0,196.18-160.52,358.58-356.69,357.09A352.54,352.54,0,0,1,292.8,792.76a17.66,17.66,0,0,0-24.35.62L168.25,893.57a17.71,17.71,0,0,0,.41,25.44c2.75,2.57,5.51,5.11,8.31,7.61a528.89,528.89,0,0,0,356.25,135.2c292.93-1.24,528.61-241.76,528.61-534.69V17.7A17.71,17.71,0,0,0,1044.13,0Z"/></svg>
+
+                        </a>
+                        <a aria-label="Instagram" class="icon cursor-pointer fill-current focus:outline-none transition duration-300 ease-in-out hover:text-yellow-light dark:hover:text-yellow-dark" href="https://www.instagram.com/nltd2010/" target="_blank" title="segg">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-16 fa-1x" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/> </svg>
+                        </a>
+                        <a aria-label="Discord" class="icon cursor-pointer fill-current focus:outline-none transition duration-300 ease-in-out hover:text-mauve-light dark:hover:text-mauve-dark" href="https://discord.com/users/780805953985445888" target="_blank" title="Regularly offline">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord" class="svg-inline--fa fa-discord fa-w-14 fa-1x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="grid my-5 gap-1">
+                        <p class="text-gray-600 dark:text-gray-400 font-semibold">Stupid student</p>
+                        <p class="text-gray-600 dark:text-gray-400 italic">Hobbies: 
+                            <span> Destroy PC, 🖥️ Coding 👩‍💻 and Eating 🍴
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-gray-600 dark:text-gray-400 inter">
+                    <div style="transition: opacity 400ms ease 0s, transform 400ms ease 0s; transform: none; opacity: 1;">
+                        <a href="https://discord.com/users/780805953985445888" rel="noopener noreferrer" class="focus:outline-none transition duration-300 ease-in-out transform hover:scale-[1.03] transform-gpu p-3 rounded-lg border-2 border-surface0-dark dark:border-surface0-light shadow drop-shadow-md flex flex-row max-w-xl animate-pulse" id="discordBox" target="_blank">
+                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;">
+                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;" class="w-45 h-45"> 
+                                    <img src="https://api.lanyard.rest/780805953985445888.png" class="w-full h-full rounded shadow w-45 h-45" style="display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 45px; max-height: 45px" id="pfp">
+                                </span>
+                            </span>
+                            <div class="my-auto ml-3">
+                                <div class="font-semibold text-sm">
+                                    <span id="discordUser"></span> - <span id="discordStatus">Fetching...</span>
+                                </div>
+                                <p class="text-xs" id="customStatus"></p>
+                                <p class="text-xs" id="spotify" style="display: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-[1.1em] inline align-middle" viewBox="0 0 16 16">
+                                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
+                                    </svg>
+                                    <span id="track" class="font-semibold"></span> by <span id="artist" class="font-semibold"></span>
+                                </p>
+                                <p class="text-xs" id="ytmusic" style="display: none;"></p>
+                                <p class="text-xs" id="vscode" style="display: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-[1.1em] inline align-middle" viewBox="0 0 32 32">
+                                        <path d="m11.72 18.685l-6.883 5.184L2 22.922L9 16L2 9.077l2.837-.947l6.883 5.184l11.433-11.3L30 4.922v22.155l-6.847 2.909ZM15.287 16l7.865 5.923V10.076Z"></path>
+                                    </svg>
+                                    <span>Workspace: </span><span id="workspace" class="font-semibold"></span> - Editing <span id="file" class="font-semibold"></span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
 </html>
