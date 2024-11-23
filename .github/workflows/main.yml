@@ -25,9 +25,9 @@ jobs:
       - name: Build the website
         run: npm run build
         env:
-          USE_ONLINE: ${{ secrets.USE_ONLINE }
-          DEVICES_URL: ${{ secrets.DEVICES_URL }
-          BLOGS_URL: ${{ secrets.BLOGS_URL}
+          USE_ONLINE: ${{ secrets.USE_ONLINE }}
+          DEVICES_URL: ${{ secrets.DEVICES_URL }}
+          BLOGS_URL: ${{ secrets.BLOGS_URL}}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
