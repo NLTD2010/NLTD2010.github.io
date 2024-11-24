@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Github, Instagram, Mail } from 'lucide-react';
+import {Facebook, Github, Instagram, Mail} from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
