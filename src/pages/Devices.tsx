@@ -27,23 +27,26 @@ const Devices: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchData('devices')
-      .then((data) => {
+    const fetchBlogs = async () => {
+      try {
+        const data = await fetchData('devices');
         setDevices(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
         setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchBlogs();
   }, []);
 
   if (loading) {
-    return <div>Loading devices...</div>;
+    return <div className="text-gray-500 dark:text-gray-400">Loading blog posts...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="text-red-500">Error: {error}</div>;
   }
 
   return (

@@ -16,7 +16,7 @@ export const fetchData = async (type: 'devices' | 'blogs') => {
   try {
     const response = await fetch(source);
     if (!response.ok) {
-      throw new Error(`Failed to fetch ${type} from ${source}`);
+      throw new Error(`Failed to fetch ${type}`);
     }
     return response.json();
   } catch (error) {

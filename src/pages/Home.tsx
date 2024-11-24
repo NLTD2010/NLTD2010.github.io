@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <div className="relative h-80 w-full overflow-hidden">
         <img
           className="h-auto w-full object-cover object-top"
-          src="https://i.imgur.com/UqZMHra.png"
+          src="https://i.ibb.co/XXXhwYy/image.png"
         />
       </div>        
       <div className="relative px-8 pb-8">
