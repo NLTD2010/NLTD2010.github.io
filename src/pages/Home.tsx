@@ -8,15 +8,15 @@ const Home: React.FC = () => {
       <div className="relative h-80 w-full overflow-hidden">
         <img
           className="h-auto w-full object-cover object-top"
-          src="https://i.ibb.co/nMh68sF/image.png"
+          src="https://i.imgur.com/UqZMHra.png"
         />
       </div>        
       <div className="relative px-8 pb-8">
           <div className="relative -mt-24">
             <img
-              src="https://i.ibb.co/5j2fHyG/Screenshot-2024-11-24-014028.png"
+              src="https://i.ibb.co/znJ17Dp/vbyq6-Dj-d.jpg"
               alt="Profile"
-              className="w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 shadow-lg transform hover:scale-105 transition-transform duration-300"
+              className="w-32 h-32 object-contain rounded-full border-4 border-white dark:border-gray-800 shadow-lg transform hover:scale-105 transition-transform duration-300"
             />
           </div>
           

@@ -1,4 +1,4 @@
-const useOnline = process.env.USE_ONLINE === 'true'; 
+const useOnline = import.meta.env.VITE_USE_ONLINE === 'true';
 
 const localConfig = {
   devices: '/devices.json',
@@ -6,8 +6,8 @@ const localConfig = {
 };
 
 const onlineConfig = {
-  devices: process.env.DEVICES_URL || '',
-  blogs: process.env.BLOGS_URL || '',
+  devices: import.meta.env.VITE_DEVICES_URL || '',
+  blogs: import.meta.env.VITE_BLOGS_URL || '',
 };
 
 export const fetchData = async (type: 'devices' | 'blogs') => {
