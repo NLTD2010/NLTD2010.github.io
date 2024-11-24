@@ -27,7 +27,7 @@ jobs:
           VITE_BLOGS_URL: ${{ secrets.BLOGS_URL}}
 
       - name: Deploy to GitHub Pages
-        uses: NLTD2010/actions-gh-pages@main
+        uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
