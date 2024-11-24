@@ -1,3 +1,6 @@
+/*
+ Create by: Nguyen Le Thai Duong
+*/
 import { useState, useEffect } from 'react';
 
 type Theme = 'light' | 'dark';

@@ -1,3 +1,6 @@
+/*
+ Create by: Nguyen Le Thai Duong
+*/
 import React from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';

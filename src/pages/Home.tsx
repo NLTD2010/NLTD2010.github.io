@@ -1,3 +1,6 @@
+/*
+ Create by: Nguyen Le Thai Duong
+*/
 import React from 'react';
 import {Facebook, Github, Instagram, Mail} from 'lucide-react';
 

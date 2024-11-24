@@ -1,3 +1,6 @@
+/*
+ Create by: Nguyen Le Thai Duong
+*/
 const useOnline = import.meta.env.VITE_USE_ONLINE === 'true';
 
 const localConfig = {

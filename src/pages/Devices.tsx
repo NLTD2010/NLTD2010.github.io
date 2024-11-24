@@ -1,3 +1,6 @@
+/*
+ Create by: Nguyen Le Thai Duong
+*/
 import React, { useEffect, useState } from 'react';
 import { Laptop, Smartphone, Watch, Headphones } from 'lucide-react';
 import { fetchData } from '../hooks/settingData';
