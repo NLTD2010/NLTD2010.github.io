@@ -54,13 +54,15 @@ A quick overview of the project folder structure:
 
 ```
 .
-├── public/             # Static assets (images, icons, etc.)
+├── public/             # Static assets (images, icons, etc.
+|   ├── blog.json       # ur blog post
+|   ├── devices.json    # ur devices list
+|
 ├── src/                # Main source code
 │   ├── components/     # Reusable components (e.g., Navbar, ThemeSwitcher)
 │   ├── pages/          # Application pages (e.g., Blog, Devices, Home)
-│   ├── styles/         # Global styles and Tailwind configuration
 │   ├── hooks/          # Custom React hooks (e.g., useTheme, settingData)
-│   ├── data/           # Local JSON data files
+|
 ├── .env.example        # Environment variable example file
 ├── .gitignore          # Ignored files and folders
 ├── package.json        # Project dependencies and scripts
