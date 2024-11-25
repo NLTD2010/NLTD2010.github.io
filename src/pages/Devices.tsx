@@ -30,7 +30,7 @@ const Devices: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
+    const fetchDevices = async () => {
       try {
         const data = await fetchData('devices');
         setDevices(data);
@@ -41,11 +41,11 @@ const Devices: React.FC = () => {
       }
     };
 
-    fetchBlogs();
+    fetchDevices();
   }, []);
 
   if (loading) {
-    return <div className="text-gray-500 dark:text-gray-400">Loading blog posts...</div>;
+    return <div className="text-gray-500 dark:text-gray-400">Loading devices list...</div>;
   }
 
   if (error) {
