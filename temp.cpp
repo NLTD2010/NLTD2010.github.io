@@ -1,3 +1,17 @@
+// Công thức cấp số cộng
+// Số hạng tổng quát: a_n = a_1 + (n-1) * d
+// Tổng n số hạng đầu: S_n = (n/2) * (2a_1 + (n-1) * d)
+
+// Công thức cấp số nhân
+// Số hạng tổng quát: a_n = a_1 * r^(n-1)
+// Tổng n số hạng đầu: S_n = a_1 * (1 - r^n) / (1 - r)  (r ≠ 1)
+// Tổng cấp số nhân vô hạn: S_∞ = a_1 / (1 - r)  (|r| < 1)
+
+// Công thức giai thừa
+// Định nghĩa: n! = n * (n-1) * (n-2) * ... * 2 * 1
+// Công thức đệ quy: n! = n * (n-1)!
+// Quy ước: 0! = 1
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
