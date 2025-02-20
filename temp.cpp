@@ -2,6 +2,36 @@
 using namespace std;
 #define ll long long
 #define int long long
+void build(int id, int l, int r)
+{
+    if (l == r) tree[id] = a[l];
+    int mid = (l + r) / 2;
+    build(id * 2, l, mid);
+    build(2 * id + 1, mid + 1, r);
+    tree[id] = max(tree[id * 2], tree[id * 2 + 1]);
+}
+
+void update(int id, int l, int r, int pos, int val)
+{
+    if (l == r && r == pos) {
+        tree[id] = val;
+        return;
+    }
+    int mid = (l + r) / 2;
+    if (pos <= mid) update(id * 2, l, mid, pos, val);
+    else update(id * 2 + 1, mid + 1, r, pos, val);
+    tree[id] = max(tree[id * 2], tree[id * 2 + 1]);
+}
+
+int check(int id, int l, int r, int u, int v)
+{
+    if (v < l || r < u) return INT_MIN;
+    if (u <= l && r <= v) return tree[id];
+    int mid = (l + r) / 2;
+    int left = check(id * 2, l, mid, u, v);
+    int right = check(id * 2 + 1, mid + 1, r, u, v);
+    return max(left, right);
+}
 
 bool snt(ll n){
     if(n <= 1) return 0;
