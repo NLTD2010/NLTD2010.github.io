@@ -1,8 +1,7 @@
 /*
  Create by: Nguyen Le Thai Duong
 */
-import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -15,69 +14,37 @@ const pageVariants = {
   exit: { opacity: 0, y: -20 },
 };
 
-const AnimatedRoutes: React.FC = () => {
-  const location = useLocation();
-
-  return (
-    <AnimatePresence mode="wait">
-      <Routes key={location.pathname} location={location}>
-        <Route
-          path="/"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.25 }}
-            >
-              <Home />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.25 }}
-            >
-              <Blog />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/devices"
-          element={
-            <motion.div
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.25 }}
-            >
-              <Devices />
-            </motion.div>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
-  );
-};
+export type Page = 'home' | 'blog' | 'devices';
 
 function App() {
+  const [activePage, setActivePage] = useState<Page>('home');
+
+  const renderPage = () => {
+    switch (activePage) {
+      case 'home': return <Home />;
+      case 'blog': return <Blog />;
+      case 'devices': return <Devices />;
+    }
+  };
+
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
-        <Navbar />
-        <main className="container mx-auto px-4 py-8">
-          <AnimatedRoutes />
-        </main>
-      </div>
-    </BrowserRouter>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
+      <main className="container mx-auto px-4 py-8">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activePage}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.25 }}
+          >
+            {renderPage()}
+          </motion.div>
+        </AnimatePresence>
+      </main>
+    </div>
   );
 }
 
