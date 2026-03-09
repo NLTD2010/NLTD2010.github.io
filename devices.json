@@ -1,0 +1,46 @@
+[
+  {
+    "category": "Workstation",
+    "icon": "Laptop",
+    "items": [
+      {
+        "name": "",
+        "specs": "",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "category": "Mobile",
+    "icon": "Smartphone",
+    "items": [
+      {
+        "name": "",
+        "specs": "",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "category": "Wearables",
+    "icon": "Watch",
+    "items": [
+      {
+        "name": "",
+        "specs": "",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "category": "Audio",
+    "icon": "Headphones",
+    "items": [
+      {
+        "name": "",
+        "specs": "",
+        "description": ""
+      }
+    ]
+  }
+]

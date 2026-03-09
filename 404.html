@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Lost in the void | NLTD2010</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --fg: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #818cf8;
+      --accent2: #c084fc;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 1.5rem;
+      padding: 3rem 2.5rem;
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .glitch {
+      font-size: clamp(5rem, 20vw, 9rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shake 2s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes shake {
+      0%,100% { transform: none; }
+      10%      { transform: translateX(-4px); }
+      20%      { transform: translateX(4px); }
+      30%      { transform: translateX(-3px); }
+      40%      { transform: translateX(3px); }
+      50%      { transform: none; }
+    }
+
+    .meme {
+        width: 20rem;
+        height: 20rem;
+        object-fit: contain;
+        display: block;
+        margin: 1rem auto; 
+        animation: sway 3s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%,100% { transform: rotate(-5deg); }
+      50%      { transform: rotate(5deg); }
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .quote {
+      color: var(--muted);
+      font-family: monospace;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .ring-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    svg.ring { transform: rotate(-90deg); }
+
+    #ring-track { stroke: #334155; }
+    #ring-fill  { stroke: var(--accent); stroke-linecap: round; transition: stroke-dashoffset 0.9s linear; }
+
+    #ring-label {
+      font-weight: 700;
+      font-size: 1.6rem;
+      fill: var(--fg);
+      transform: rotate(90deg);
+      transform-origin: 48px 48px;
+    }
+
+    .info {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .info strong { color: var(--accent); }
+
+    .btn {
+      margin-top: 0.75rem;
+      display: inline-block;
+      padding: 0.55rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn:hover  { background: var(--accent2); }
+    .btn:active { transform: scale(0.96); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="glitch">404</div>
+    <img 
+        src="./avatar/404.jpg" 
+        class="meme" 
+    />
+    <h2>You seem lost, travolta-style</h2>
+    <p class="quote">&ldquo;Where is the page? Where IS the page?&rdquo;</p>
+    <p class="desc">
+      This page doesn&apos;t exist.<br>Maybe it never did. Maybe you dreamed it.
+    </p>
+
+    <div class="ring-wrap">
+      <svg class="ring" width="96" height="96" viewBox="0 0 96 96">
+        <circle id="ring-track" cx="48" cy="48" r="36" fill="none" stroke-width="6"/>
+        <circle id="ring-fill"  cx="48" cy="48" r="36" fill="none" stroke-width="6"
+                stroke-dasharray="226.2" stroke-dashoffset="0"/>
+        <text id="ring-label" x="48" y="48" text-anchor="middle" dominant-baseline="central">5</text>
+      </svg>
+      <p class="info">Teleporting you home in <strong id="secs">5</strong>s&hellip;</p>
+      <a class="btn" href="/">Take me home NOW</a>
+    </div>
+  </div>
+
+  <script>
+    // ─── CONFIG ───────────────────────────────────────────────
+    var REDIRECT_DELAY = 100;   // ← change this number (seconds)
+    var REDIRECT_URL   = '/'; // ← change destination if needed
+    // ──────────────────────────────────────────────────────────
+
+    var count        = REDIRECT_DELAY;
+    var circumference = 2 * Math.PI * 36; // ring radius = 36
+    var fill  = document.getElementById('ring-fill');
+    var label = document.getElementById('ring-label');
+    var secs  = document.getElementById('secs');
+
+    fill.setAttribute('stroke-dasharray',  circumference);
+    fill.setAttribute('stroke-dashoffset', 0);
+    label.textContent = count;
+    secs.textContent  = count;
+
+    var interval = setInterval(function () {
+      count--;
+      if (count <= 0) {
+        clearInterval(interval);
+        window.location.href = REDIRECT_URL;
+        return;
+      }
+      var offset = circumference - (count / REDIRECT_DELAY) * circumference;
+      fill.setAttribute('stroke-dashoffset', offset);
+      label.textContent = count;
+      secs.textContent  = count;
+    }, 1000);
+  </script>
+</body>
+</html>
