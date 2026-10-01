@@ -63,7 +63,7 @@ const Home: React.FC = () => {
               { icon: Github, label: 'GitHub', href: 'https://github.com/NLTD2010' },
               { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/NLTD2010' },
               { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/nltd2010/' },
-              { icon: Mail, label: 'Email', href: 'mailto:thaiduong35cpu@gmail.com' }
+              { icon: Mail, label: 'Email', href: 'mailto:nguyenlethaiduong2010@gmail.com' }
             ].map((social) => (
               <a
                 key={social.label}
